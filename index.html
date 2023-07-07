@@ -26,15 +26,10 @@
             </div>
 
             <div class=" mt-3 w-75">
-                <div class=" mb-3 d-flex flex-column align-items-center">
+                <div class=" mb-3 input-group">
                     
-                        <input id="ftInput"  class="mb-3 me-2 form-control form-control-sm ftinput" placeholder="feet here" type="number">
-                        <!-- <label for="" class=" form-label">- feet</label> -->
-                    
-                    
-                        <input id="inInput" class=" me-2 form-control form-control-sm ftinput" placeholder="inches here" type="number">
-                         <!-- <label for="" class=" form-label">- inches</label> -->
-                    
+                        <input id="ftInput"  class="mb-3 form-control  ftinput" placeholder="feet here" type="number">  
+                        <input id="inInput" class=" form-control  ftinput" placeholder="inches here" type="number">
                 </div>
                 <p class="">to</p>
                 <div class="px-5 py-2 bshadow  rounded mb-3 d-inline-block">
@@ -76,7 +71,7 @@
           const inValue = document.getElementById('inInput');
             let totalInches = (ftInput * 12) + inInput;
             let centiResult = totalInches * 2.54;
-            result.innerText = centiResult.toFixed(2) + ' cm';
+            result.innerText = `${ftInput} ft ${inInput} in = ${centiResult.toFixed(2)} cm`;
             console.log(`User converted ${ftInput} ft ${inInput} in to ${centiResult.toFixed(2)} cm`);
             ftValue.value = null;
             inValue.value = null;
